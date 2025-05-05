@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christopher Williams - QA Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --card-color: #1e1e1e;
+    }
+    body.light-mode {
+      --bg-color: #f4f4f4;
+      --text-color: #111;
+      --card-color: #fff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    section {
+      background: var(--card-color);
+    }
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+    #scrollTopBtn:hover {
+      background-color: #00acc1;
+    }
+    #themeToggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #00bcd4;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth scroll
+      const scrollLinks = document.querySelectorAll('nav a');
+      scrollLinks.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Scroll to top button
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      window.addEventListener('scroll', () => {
+        scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Theme toggle
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        themeToggle.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+      });
+
+    });
+  </script>
+</head>
+<body>
+<button id="themeToggle">Light Mode</button>
+<header>
+  <div class="container">
+    <h1>Christopher Williams</h1>
+    <h2>QA Engineer 2</h2>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </div>
+</header>
+
+<main class="container">
+  <section id="summary">
+    <h3>Professional Summary</h3>
+    <p>
+      I am a highly motivated and detail-oriented QA Engineer with a strong foundation in test automation, CI/CD practices, and accessibility compliance. I bring value through scalable framework design, robust API testing, and strategic test coverage that improves delivery speed and confidence in product quality.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="grid">
+      <ul>
+        <li><strong>Languages:</strong> Java, JavaScript, SQL</li>
+        <li><strong>Frameworks:</strong> Selenium, TestNG, Cucumber, Playwright, Cypress</li>
+      </ul>
+      <ul>
+        <li><strong>API & Tools:</strong> Postman, Maven, Git, Azure DevOps, Jira</li>
+        <li><strong>Accessibility:</strong> JAWS, NVDA, Axe, Colour Contrast Analyst</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h3>Professional Experience</h3>
+
+    <article>
+      <h4>Inspira | QA Engineer 2 <span>Mar 2024 – Present, Chicago, IL</span></h4>
+      <ul>
+        <li>Migrated 5,000+ legacy test cases into Azure DevOps for improved regression management and traceability.</li>
+        <li>Automated 100+ in-sprint test cases using Java, Selenium, TestNG, and Maven for agile releases.</li>
+        <li>Developed API testing suites in Postman for validation of member data and health plan integrity.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h4>Deloitte | Solutions Analyst <span>May 2022 – Mar 2024, Mechanicsburg, PA</span></h4>
+      <ul>
+        <li>Created 200+ test scripts for Maryland State Child Care system across agile cycles using Selenium & Jira.</li>
+        <li>Designed a Java Selenium framework for the PA Workers' Compensation system to enable non-technical QA.</li>
+        <li>Led WCAG accessibility audits and testing on Salesforce apps across platforms (Chrome, Safari, Edge).</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="certifications">
+    <h3>Certifications</h3>
+    <ul>
+      <li>ASTQB Certified Tester</li>
+      <li>SAFe® 6 Certified Practitioner</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <p><strong>Email:</strong> <a href="mailto:Chriswilliamssecure@gmail.com">Chriswilliamssecure@gmail.com</a></p>
+    <p><strong>Phone:</strong> (773)-947-4932</p>
+    <p><strong>Location:</strong> Chicago, IL</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Christopher Williams</p>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" title="Go to top">↑ Top</button>
+
+</body>
+</html>
