@@ -66,7 +66,6 @@
   </style>
   <script defer>
     document.addEventListener('DOMContentLoaded', () => {
-      // Smooth scroll
       const scrollLinks = document.querySelectorAll('nav a');
       scrollLinks.forEach(link => {
         link.addEventListener('click', e => {
@@ -75,7 +74,6 @@
         });
       });
 
-      // Scroll to top button
       const scrollTopBtn = document.getElementById('scrollTopBtn');
       window.addEventListener('scroll', () => {
         scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
@@ -84,7 +82,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
-      // Theme toggle
       const themeToggle = document.getElementById('themeToggle');
       themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
@@ -97,9 +94,10 @@
 <button id="themeToggle">Light Mode</button>
 <header>
   <div class="container">
-    <h1>Christopher R Williams</h1>
+    <h1>Christopher R. Williams</h1>
     <h2>QA Engineer II</h2>
     <nav>
+      <a href="#education">Education</a>
       <a href="#summary">Summary</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
@@ -111,6 +109,12 @@
 </header>
 
 <main class="container">
+  <section id="education">
+    <h3>Education</h3>
+    <p><strong>Gettysburg College, Gettysburg, PA</strong><br>
+      Bachelor of Arts in Computer Science and Philosophy — May 2022</p>
+  </section>
+
   <section id="summary">
     <h3>Professional Summary</h3>
     <p>
@@ -118,7 +122,8 @@
       frameworks and enhancing testing strategies for consumer-facing and internal web applications. Proficient in leveraging
       Java, Selenium, TestNG, Maven, and API testing to architect scalable, maintainable, and high-efficiency automation
       solutions. Demonstrated success in driving substantial innovation and improvements in test reliability, and CI/CD
-      integration through strategic automation initiatives.    </p>
+      integration through strategic automation initiatives.
+    </p>
   </section>
 
   <section id="skills">
@@ -137,7 +142,6 @@
 
   <section id="experience">
     <h3>Professional Experience</h3>
-
     <article>
       <h4>Inspira Financial | QA Engineer II <span>Mar 2024 – Present, Chicago, IL</span></h4>
       <ul>
@@ -145,26 +149,17 @@
         <li>Automated 100+ in-sprint test cases using Java, Selenium Webdriver, TestNG, and Maven for agile releases.</li>
         <li>Continuously innovating in-house automation framework to benefit QA workflow;
           created data generation modules to generate data dynamically to streamline web automation workflow.</li>
-        <li>Developed comprehensive API testing suites using REST-assured and Postman to validate the accuracy, consistency, and integrity of member enrollment data, benefit plan configurations, and health plan transactions across internal and third-party systems. </li>
-        <li>Automated sprint metrics with Power BI enable Agile teams and leadership to monitor essential business metrics that drive sprint performance and delivery outcomes. Key metrics include velocity trends (story points completed per sprint),
-          commitment vs. completion ratio, work item aging, cycle time, and lead time, which help assess throughput and efficiency. </li>
+        <li>Developed comprehensive API testing suites using REST-assured and Postman to validate the accuracy, consistency, and integrity of member enrollment data, benefit plan configurations, and health plan transactions across internal and third-party systems.</li>
+        <li>Automated sprint metrics with Power BI enable Agile teams and leadership to monitor essential business metrics that drive sprint performance and delivery outcomes.</li>
       </ul>
     </article>
 
     <article>
       <h4>Deloitte | Solutions Analyst <span>May 2022 – Mar 2024, Mechanicsburg, PA</span></h4>
       <ul>
-        <li>Quality Engineer — State of Pennsylvania’s Workers' Compensation Automation and
-          Integration System. Designed and implemented a Java Selenium data-driven testing framework tailored to client
-          specifications for manual testing, enabling their team to efficiently execute scalable and reliable test cases across
-          the application without technical experience</li>
-        <li>Quality Engineer — Maryland State Child Care, designed and developed 200+ automated
-          test scripts. Responsible for end-to-end feature testing throughout the agile development cycle to ensure
-          application stability and quality. Proactively identified and reported defects using Jira, collaborating closely with
-          cross-functional teams to prioritize and resolve issues rapidly. </li>
-        <li>Accessibility Tester — Maryland State Child Care application built on Salesforce, following WCAG guidelines, for
-          mobile (Safari on IOS) and web testing (Chrome, Edge, Safari on Mac) using manual and automated testing with
-          tools (NVDA, JAWS, Colour Contrast Analyst, AXE, and Accessibility for Mac.</li>
+        <li>Quality Engineer — State of Pennsylvania’s Workers' Compensation Automation and Integration System. Designed and implemented a Java Selenium data-driven testing framework tailored to client specifications for manual testing, enabling their team to efficiently execute scalable and reliable test cases across the application without technical experience.</li>
+        <li>Quality Engineer — Maryland State Child Care, designed and developed 200+ automated test scripts. Responsible for end-to-end feature testing throughout the agile development cycle to ensure application stability and quality. Proactively identified and reported defects using Jira, collaborating closely with cross-functional teams to prioritize and resolve issues rapidly.</li>
+        <li>Accessibility Tester — Maryland State Child Care application built on Salesforce, following WCAG guidelines, for mobile (Safari on IOS) and web testing (Chrome, Edge, Safari on Mac) using manual and automated testing with tools (NVDA, JAWS, Colour Contrast Analyst, AXE, and Accessibility for Mac).</li>
       </ul>
     </article>
   </section>
