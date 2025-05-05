@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christopher Williams - QA Engineer</title>
+  <title>Christopher Williams - QA Engineer II</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -20,10 +20,19 @@
     body {
       background: var(--bg-color);
       color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
       transition: background 0.3s, color 0.3s;
+    }
+    header, section, nav a, h1, h2, h3, h4, p, ul, li {
+      color: var(--text-color);
     }
     section {
       background: var(--card-color);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
     #scrollTopBtn {
       position: fixed;
@@ -81,7 +90,6 @@
         document.body.classList.toggle('light-mode');
         themeToggle.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
       });
-
     });
   </script>
 </head>
@@ -89,8 +97,8 @@
 <button id="themeToggle">Light Mode</button>
 <header>
   <div class="container">
-    <h1>Christopher Williams</h1>
-    <h2>QA Engineer 2</h2>
+    <h1>Christopher R Williams</h1>
+    <h2>QA Engineer II</h2>
     <nav>
       <a href="#summary">Summary</a>
       <a href="#skills">Skills</a>
@@ -106,20 +114,23 @@
   <section id="summary">
     <h3>Professional Summary</h3>
     <p>
-      I am a highly motivated and detail-oriented QA Engineer with a strong foundation in test automation, CI/CD practices, and accessibility compliance. I bring value through scalable framework design, robust API testing, and strategic test coverage that improves delivery speed and confidence in product quality.
-    </p>
+      Experienced Quality Assurance Engineer specializing in designing innovative test automation
+      frameworks and enhancing testing strategies for consumer-facing and internal web applications. Proficient in leveraging
+      Java, Selenium, TestNG, Maven, and API testing to architect scalable, maintainable, and high-efficiency automation
+      solutions. Demonstrated success in driving substantial innovation and improvements in test reliability, and CI/CD
+      integration through strategic automation initiatives.    </p>
   </section>
 
   <section id="skills">
     <h3>Skills</h3>
     <div class="grid">
       <ul>
-        <li><strong>Languages:</strong> Java, JavaScript, SQL</li>
-        <li><strong>Frameworks:</strong> Selenium, TestNG, Cucumber, Playwright, Cypress</li>
+        <li><strong>Programing Languages:</strong> Java, JavaScript, Python, SQL</li>
+        <li><strong>Automation Testing Tools:</strong> Selenium, Appium, Cucumber, Playwright, Cypress</li>
       </ul>
       <ul>
-        <li><strong>API & Tools:</strong> Postman, Maven, Git, Azure DevOps, Jira</li>
-        <li><strong>Accessibility:</strong> JAWS, NVDA, Axe, Colour Contrast Analyst</li>
+        <li><strong>Work Management Tools:</strong> Postman, Git, Azure DevOps, Jira</li>
+        <li><strong>Accessibility Tools:</strong> JAWS, NVDA, Axe, Colour Contrast Analyst</li>
       </ul>
     </div>
   </section>
@@ -128,20 +139,32 @@
     <h3>Professional Experience</h3>
 
     <article>
-      <h4>Inspira | QA Engineer 2 <span>Mar 2024 – Present, Chicago, IL</span></h4>
+      <h4>Inspira Financial | QA Engineer II <span>Mar 2024 – Present, Chicago, IL</span></h4>
       <ul>
         <li>Migrated 5,000+ legacy test cases into Azure DevOps for improved regression management and traceability.</li>
-        <li>Automated 100+ in-sprint test cases using Java, Selenium, TestNG, and Maven for agile releases.</li>
-        <li>Developed API testing suites in Postman for validation of member data and health plan integrity.</li>
+        <li>Automated 100+ in-sprint test cases using Java, Selenium Webdriver, TestNG, and Maven for agile releases.</li>
+        <li>Continuously innovating in-house automation framework to benefit QA workflow;
+          created data generation modules to generate data dynamically to streamline web automation workflow.</li>
+        <li>Developed comprehensive API testing suites using REST-assured and Postman to validate the accuracy, consistency, and integrity of member enrollment data, benefit plan configurations, and health plan transactions across internal and third-party systems. </li>
+        <li>Automated sprint metrics with Power BI enable Agile teams and leadership to monitor essential business metrics that drive sprint performance and delivery outcomes. Key metrics include velocity trends (story points completed per sprint),
+          commitment vs. completion ratio, work item aging, cycle time, and lead time, which help assess throughput and efficiency. </li>
       </ul>
     </article>
 
     <article>
       <h4>Deloitte | Solutions Analyst <span>May 2022 – Mar 2024, Mechanicsburg, PA</span></h4>
       <ul>
-        <li>Created 200+ test scripts for Maryland State Child Care system across agile cycles using Selenium & Jira.</li>
-        <li>Designed a Java Selenium framework for the PA Workers' Compensation system to enable non-technical QA.</li>
-        <li>Led WCAG accessibility audits and testing on Salesforce apps across platforms (Chrome, Safari, Edge).</li>
+        <li>Quality Engineer — State of Pennsylvania’s Workers' Compensation Automation and
+          Integration System. Designed and implemented a Java Selenium data-driven testing framework tailored to client
+          specifications for manual testing, enabling their team to efficiently execute scalable and reliable test cases across
+          the application without technical experience</li>
+        <li>Quality Engineer — Maryland State Child Care, designed and developed 200+ automated
+          test scripts. Responsible for end-to-end feature testing throughout the agile development cycle to ensure
+          application stability and quality. Proactively identified and reported defects using Jira, collaborating closely with
+          cross-functional teams to prioritize and resolve issues rapidly. </li>
+        <li>Accessibility Tester — Maryland State Child Care application built on Salesforce, following WCAG guidelines, for
+          mobile (Safari on IOS) and web testing (Chrome, Edge, Safari on Mac) using manual and automated testing with
+          tools (NVDA, JAWS, Colour Contrast Analyst, AXE, and Accessibility for Mac.</li>
       </ul>
     </article>
   </section>
@@ -164,11 +187,10 @@
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 Christopher Williams</p>
+    <p>&copy; 2025 Christopher Williams — Built with ❤️ in Chicago</p>
   </div>
 </footer>
 
 <button id="scrollTopBtn" title="Go to top">↑ Top</button>
-
 </body>
 </html>
